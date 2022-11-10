@@ -5,11 +5,12 @@ function symbolComparison (arg) {
 
     while (i < arg.length - 1) {
 
-        let a = String(arg[i]);
-        let b = String(arg[i + 1]);
+        let a = arg[i];
+        let b = arg[i + 1];
 
         array.push(( a[0] == b[0]) && (a[a.length - 1] == b[b.length - 1]));
         i++;
+        
         };
 
     return(array);
