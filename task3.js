@@ -18,7 +18,7 @@ function solution(arr) {
                     
                 }
                 
-                result.push(arr[i] + ' - ' + last)
+                result.push(arr[i] + '-' + last)
 
                 i = a+1
 
@@ -32,7 +32,7 @@ function solution(arr) {
 
         }
 
-        return(result)
+        return(String(result))
 
     }
 
