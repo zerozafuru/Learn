@@ -2,24 +2,27 @@
 <html lang="ru">
 
 <head>
-  <tittle></tittle>
-  <link href="input.css">
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Revalia&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="layout.css">
 </head>
 
 <body class="body">
   <!--first-screen-->
-  <section>
+  <section id="c1" class="first-screen">
     <header>
       <div class="container">
         <div class="header-top">
           <div class="logo">WD</div>
           <nav class="navbar">
             <ul class="navbar__list">
-              <li class="navbar__item"><a href="#" class="navbar__link">главная</a></li>
-              <li class="navbar__item"><a href="#" class="navbar__link">об авторе</a></li>
-              <li class="navbar__item"><a href="#" class="navbar__link">работы</a></li>
-              <li class="navbar__item"><a href="#" class="navbar__link">процесс</a></li>
-              <li class="navbar__item"><a href="#" class="navbar__link">контакты</a></li>
+              <li class="navbar__item"><a href="#c1" class="navbar__link">главная</a></li>
+              <li class="navbar__item"><a href="#c2" class="navbar__link">об авторе</a></li>
+              <li class="navbar__item"><a href="#c3" class="navbar__link">работы</a></li>
+              <li class="navbar__item"><a href="#c4" class="navbar__link">процесс</a></li>
+              <li class="navbar__item"><a href="#c5" class="navbar__link">контакты</a></li>
             </ul>
           </nav>
         </div>
@@ -38,7 +41,7 @@
     </header>
   </section>
   <!--about-me-->
-  <section>
+  <section id="c2" class="about-me">
     <header>
       <div class="container">
         <div class="header-mid">
@@ -55,47 +58,47 @@
     </header>
   </section>
   <!--numbers-->
-  <section>
+  <section class="numbers">
     <header>
       <div class="container">
         <div class="header-mid">
           <ul class="numbers__list">
-            <li class="number__item">
+            <li class="numbers__item">
               <img class="header-mid__image" src="images/scroll.png" alt="scroll">
               <div class="header-mid__text">
                 <h3 class="title title--h3">40+</h3>
                 <p class="paragraph">проектов</p>
               </div>
             </li>
-            <li class="number__item">
+            <li class="numbers__item">
               <img class="header-mid__image" src="images/scroll.png" alt="scroll">
               <div class="header-mid__text">
                 <h3 class="title title--h3">40+</h3>
                 <p class="paragraph">проектов</p>
               </div>
             </li>
-            <li class="number__item">
+            <li class="numbers__item">
               <img class="header-mid__image" src="images/scroll.png" alt="scroll">
               <div class="header-mid__text">
                 <h3 class="title title--h3">40+</h3>
                 <p class="paragraph">проектов</p>
               </div>
             </li>
-            <li class="number__item">
+            <li class="numbers__item">
               <img class="header-mid__image" src="images/scroll.png" alt="scroll">
               <div class="header-mid__text">
                 <h3 class="title title--h3">40+</h3>
                 <p class="paragraph">проектов</p>
               </div>
             </li>
-            <li class="number__item">
+            <li class="numbers__item">
               <img class="header-mid__image" src="images/scroll.png" alt="scroll">
               <div class="header-mid__text">
                 <h3 class="title title--h3">40+</h3>
                 <p class="paragraph">проектов</p>
               </div>
             </li>
-            <li class="number__item">
+            <li class="numbers__item">
               <img class="header-mid__image" src="images/scroll.png" alt="scroll">
               <div class="header-mid__text">
                 <h3 class="title title--h3">40+</h3>
@@ -108,28 +111,25 @@
     </header>
   </section>
   <!--skills-->
-  <section>
+  <section class="skills">
     <header>
       <div class="container">
         <div class="header-mid">
           <div class="header-mid__text">
             <h2 class="title title--h2"></h2>
           </div>
-          <ul class="skills">
+          <ul class="skills__list">
             <li class="skills__item">
               <p class="paragraph">Adobe Photoshop</p>
-              <div class="rectangle--1"></div>
-              <div class="rectangle--2"></div>
+              <div class="skill-bar">80%</div>
             </li>
             <li class="skills__item">
               <p class="paragraph">Adobe Photoshop</p>
-              <div class="rectangle--1"></div>
-              <div class="rectangle--2"></div>
+              <div class="skill-bar">80%</div>
             </li>
             <li class="skills__item">
               <p class="paragraph">Adobe Photoshop</p>
-              <div class="rectangle--1"></div>
-              <div class="rectangle--2"></div>
+              <div class="skill-bar">80%</div>
             </li>
           </ul>
         </div>
@@ -138,7 +138,7 @@
     </header>
   </section>
   <!--video-->
-  <section>
+  <section id="c4" class="video">
     <header>
       <div class="container">
         <div class="header-top">
@@ -156,13 +156,53 @@
     </header>
   </section>
   <!--projects-->
-  <section>
+  <section id="c3" class="projects">
+    <header>
+      <img class="header-mid__image" src="images/picture1.png" alt="project">
+      <img class="header-mid__image" src="images/picture2.png" alt="project">
+      <img class="header-mid__image" src="images/picture1.png" alt="project">
+      <img class="header-mid__image" src="images/picture2.png" alt="project">
+      <img class="header-mid__image" src="images/picture1.png" alt="project">
+      <img class="header-mid__image" src="images/picture2.png" alt="project">
+      <img class="header-mid__image" src="images/picture1.png" alt="project">
+      <img class="header-mid__image" src="images/picture2.png" alt="project">
+    </header>
   </section>
   <!--form-->
-  <section>
+  <section class="form">
+    <header>
+      <div class="container">
+        <div class="header-top">
+          <div class="header-top__text">
+            <h2 class="title title--h2">Хотите веб-сайт?</h2>
+            <p class="paragraph paragraph--center">Lorem Ipsum - это текст-"рыба", часто используемый в печати и
+              вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</p>
+          </div>
+        </div>
+        <div class="header-bot">
+          <form class="form" action="">Ваше имя</form>
+          <form class="form" action="">Ваш e-mail</form>
+          <form class="form form--big" action="">Сообщение</form>
+          <button class="button">отправить</button>
+        </div>
+      </div>
+    </header>
   </section>
   <!--footer-->
-  <section>
+  <section id="c5" class="footer">
+    <header>
+      <div class="container">
+        <div class="header-mid">
+          <div class="header-mid__text">
+            <h3 class="title title--h3">Иванов Иван</h3>
+            <p class="paragraph paragraph--small">(с) 2018. Все права защищены.</p>
+          </div>
+          <div class="header-mid__logo">
+            <img class="header-mid__image" src="images/vk.png" alt="vk">
+          </div>
+        </div>
+      </div>
+    </header>
   </section>
 </body>
 
