@@ -32,8 +32,8 @@
 }
 
 .container {
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 .header-top {
@@ -44,6 +44,11 @@
 .header-bot {
   display: flex;
   justify-content: space-around;
+}
+
+.header-mid {
+  display: flex;
+  justify-content: center
 }
 
 .logo {
@@ -61,24 +66,73 @@
   color: #34547A;
 }
 
-.navbar {
-  width: 611px;
-  height: 16px;
-  left: 896px;
-  top: 72px;
-}
+.navbar {}
 
 .navbar__list {
   list-style-type: none;
   text-transform: uppercase;
   display: flex;
-
-
 }
 
 .navbar__item {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 26px;
-  letter-spacing: 0.1em;
+  margin-left: 7%;
 }
+
+.navbar__link {
+  outline: none;
+  text-decoration: none;
+  color: #000000;
+  letter-spacing: 0.1em; 
+}
+
+.header-bot__image {
+  width: 357px;
+  height: 233.7px;
+  margin-top: 21px;
+  margin-bottom: 42.3px;
+  margin-left: 87px;
+  margin-right: 130px;
+}
+
+.header-bot__text {}
+
+.title{}
+
+.title--h1{}
+
+.paragraph{}
+
+.button{}
+
+.button--big{}
+
+.header-mid__text{}
+
+.title--h2{}
+
+.paragraph--center{}
+
+.numbers__list{}
+
+.number__item{}
+
+.header-mid__image{}
+
+.title--h3{}
+
+.skills__list{}
+
+.skills__item{}
+
+.slill-bar{}
+
+.header-top__text{}
+
+.form-input{}
+
+.form-input--big {}
+
+.paragraph--small{}
+
+
+
