@@ -3,209 +3,221 @@
 
 <head>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="./reset.css">
+  <link rel="stylesheet" href="./layout.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Revalia&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"><link rel="stylesheet" href="layout.css">
 </head>
 
-<body class="body">
+<body>
   <!--first-screen-->
-  <section id="c1" class="first-screen">
-    <header>
-      <div class="container">
-        <div class="header-top">
-          <div class="logo">WD</div>
-          <nav class="navbar">
-            <ul class="navbar__list">
-              <li class="navbar__item"><a href="#c1" class="navbar__link">главная</a></li>
-              <li class="navbar__item"><a href="#c2" class="navbar__link">об авторе</a></li>
-              <li class="navbar__item"><a href="#c3" class="navbar__link">работы</a></li>
-              <li class="navbar__item"><a href="#c4" class="navbar__link">процесс</a></li>
-              <li class="navbar__item"><a href="#c5" class="navbar__link">контакты</a></li>
-            </ul>
-          </nav>
+  <header id="first-screen">
+    <div class="container">
+      <div class="container-top">
+        <div class="logo">
+          <a class="logo__link" href="./layout.html">WD</a>
         </div>
-        <div class="header-bot">
-          <img class="header-bot__image" src="images/notebook.png" alt="notebook">
-          <div class="header-bot__text">
-            <h1 class="title title--h1">Дизайн и верстка</h1>
-            <p class="paragraph">
-              Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является
-              стандартной "рыбой" для текстов на латинице с начала XVI века.
-            </p>
-            <button class="button button--big">написать мне</button>
-          </div>
+        <nav class="navbar">
+          <ul class="navbar__list">
+            <li class="navbar__item"><a href="#first-screen" class="navbar__link">главная</a></li>
+            <li class="navbar__item"><a href="#about-me" class="navbar__link">об авторе</a></li>
+            <li class="navbar__item"><a href="#projects" class="navbar__link">работы</a></li>
+            <li class="navbar__item"><a href="#video" class="navbar__link">процесс</a></li>
+            <li class="navbar__item"><a href="#footer" class="navbar__link">контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="container-bot">
+        <img class="container-bot__image" src="images/notebook.png" alt="notebook">
+        <div class="container-bot__text">
+          <h1 class="title title--h1">Дизайн и верстка</h1>
+          <p class="paragraph">
+            Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является
+            стандартной "рыбой" для текстов на латинице с начала XVI века.
+          </p>
+          <button class="button button--big">
+            <p class="button__text">написать мне</p>
+          </button>
         </div>
       </div>
-    </header>
-  </section>
+    </div>
+  </header>
   <!--about-me-->
-  <section id="c2" class="about-me">
-    <header>
-      <div class="container">
-        <div class="header-mid">
-          <div class="header-mid__text">
-            <h2 class="title title--h2">Обо мне</h2>
-            <p class="paragraph paragraph--center">
-              Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является
-              стандартной
-              "рыбой" для текстов на латинице с начала XVI века.
-            </p>
-          </div>
+  <section id="about-me" class="about-me">
+
+    <div class="container">
+      
+        <div class="container__text">
+          <h2 class="title title--h2">Обо мне</h2>
+          <p class="paragraph paragraph--center">
+            Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является
+            стандартной
+            "рыбой" для текстов на латинице с начала XVI века.
+          </p>
         </div>
-      </div>
-    </header>
+      
+    </div>
+
   </section>
   <!--numbers-->
   <section class="numbers">
-    <header>
-      <div class="container">
-        <div class="header-mid">
-          <ul class="numbers__list">
-            <li class="numbers__item">
-              <img class="header-mid__image" src="images/scroll.png" alt="scroll">
-              <div class="header-mid__text">
-                <h3 class="title title--h3">40+</h3>
-                <p class="paragraph">проектов</p>
-              </div>
-            </li>
-            <li class="numbers__item">
-              <img class="header-mid__image" src="images/scroll.png" alt="scroll">
-              <div class="header-mid__text">
-                <h3 class="title title--h3">40+</h3>
-                <p class="paragraph">проектов</p>
-              </div>
-            </li>
-            <li class="numbers__item">
-              <img class="header-mid__image" src="images/scroll.png" alt="scroll">
-              <div class="header-mid__text">
-                <h3 class="title title--h3">40+</h3>
-                <p class="paragraph">проектов</p>
-              </div>
-            </li>
-            <li class="numbers__item">
-              <img class="header-mid__image" src="images/scroll.png" alt="scroll">
-              <div class="header-mid__text">
-                <h3 class="title title--h3">40+</h3>
-                <p class="paragraph">проектов</p>
-              </div>
-            </li>
-            <li class="numbers__item">
-              <img class="header-mid__image" src="images/scroll.png" alt="scroll">
-              <div class="header-mid__text">
-                <h3 class="title title--h3">40+</h3>
-                <p class="paragraph">проектов</p>
-              </div>
-            </li>
-            <li class="numbers__item">
-              <img class="header-mid__image" src="images/scroll.png" alt="scroll">
-              <div class="header-mid__text">
-                <h3 class="title title--h3">40+</h3>
-                <p class="paragraph">проектов</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </header>
+    <div class="container">
+      <ul class="numbers__list">
+        <li class="numbers__item">
+          <img class="numbers__image" src="images/scroll.png" alt="scroll">
+          <div class="numbers__text">
+            <h3 class="title title--h3">40+</h3>
+            <p class="paragraph paragraph--list">проектов</p>
+          </div>
+        </li>
+        <li class="numbers__item">
+          <img class="numbers__image" src="images/scroll.png" alt="scroll">
+          <div class="numbers__text">
+            <h3 class="title title--h3">40+</h3>
+            <p class="paragraph paragraph--list">проектов</p>
+          </div>
+        </li>
+        <li class="numbers__item">
+          <img class="numbers__image" src="images/scroll.png" alt="scroll">
+          <div class="numbers__text">
+            <h3 class="title title--h3">40+</h3>
+            <p class="paragraph paragraph--list">проектов</p>
+          </div>
+        </li>
+        <li class="numbers__item">
+          <img class="numbers__image" src="images/scroll.png" alt="scroll">
+          <div class="numbers__text">
+            <h3 class="title title--h3">40+</h3>
+            <p class="paragraph paragraph--list">проектов</p>
+          </div>
+        </li>
+        <li class="numbers__item">
+          <img class="numbers__image" src="images/scroll.png" alt="scroll">
+          <div class="numbers__text">
+            <h3 class="title title--h3">40+</h3>
+            <p class="paragraph paragraph--list">проектов</p>
+          </div>
+        </li>
+        <li class="numbers__item">
+          <img class="numbers__image" src="images/scroll.png" alt="scroll">
+          <div class="numbers__text">
+            <h3 class="title title--h3">40+</h3>
+            <p class="paragraph paragraph--list">проектов</p>
+          </div>
+        </li>
+      </ul>
+    </div>
   </section>
   <!--skills-->
   <section class="skills">
-    <header>
-      <div class="container">
-        <div class="header-mid">
-          <div class="header-mid__text">
-            <h2 class="title title--h2"></h2>
-          </div>
+    <div class="container">
+      <div class="container-skills">
+        <div class="skills__text">
+          <h2 class="title title--h2 title__left">Мои навыки</h2>
           <ul class="skills__list">
             <li class="skills__item">
               <p class="paragraph">Adobe Photoshop</p>
-              <div class="skill-bar">80%</div>
+
+              <div class="bar skills-bar ">
+                <div class="bar skills-bar__progress "></div>
+
+              </div>
             </li>
             <li class="skills__item">
               <p class="paragraph">Adobe Photoshop</p>
-              <div class="skill-bar">80%</div>
+
+              <div class="bar skills-bar ">
+                <div class="bar skills-bar__progress "></div>
+
+              </div>
             </li>
             <li class="skills__item">
               <p class="paragraph">Adobe Photoshop</p>
-              <div class="skill-bar">80%</div>
+
+              <div class="bar skills-bar">
+                <div class="bar skills-bar__progress"></div>
+
+              </div>
             </li>
           </ul>
         </div>
-        <img class="header-mid__image" src="images/man.png" alt="man">
+        <img class="skills__image" src="images/man.png" alt="man">
       </div>
-    </header>
+    </div>
   </section>
   <!--video-->
-  <section id="c4" class="video">
-    <header>
-      <div class="container">
-        <div class="header-top">
-          <div class="header-top__text">
-            <h2 class="tittle tittle--h2">Как я работаю</h2>
-            <p class="paragraph paragraph--center">Lorem Ipsum - это текст-"рыба", часто используемый в печати и
-              вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</p>
-          </div>
+  <section id="video" class="video">
+
+    <div class="container">
+      
+        <div class="container__text">
+          <h2 class="title title--h2">Как я работаю</h2>
+          <p class="paragraph paragraph--center">Lorem Ipsum - это текст-"рыба", часто используемый в печати и
+            вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</p>
         </div>
-        <div class="header-bot">
-          <img class="header-bot__image" src="images/video.png" alt="video">
-          <img class="header-bot__image" src="images/play.png" alt="play">
+      
+      
+        <div class="video__grid">
+          <img class="video__image " src="images/video.png" alt="video">
+          <img class="play__image " src="images/play.png" alt="play">
         </div>
-      </div>
-    </header>
+      
+    </div>
+
   </section>
   <!--projects-->
-  <section id="c3" class="projects">
-    <header>
-      <img class="header-mid__image" src="images/picture1.png" alt="project">
-      <img class="header-mid__image" src="images/picture2.png" alt="project">
-      <img class="header-mid__image" src="images/picture1.png" alt="project">
-      <img class="header-mid__image" src="images/picture2.png" alt="project">
-      <img class="header-mid__image" src="images/picture1.png" alt="project">
-      <img class="header-mid__image" src="images/picture2.png" alt="project">
-      <img class="header-mid__image" src="images/picture1.png" alt="project">
-      <img class="header-mid__image" src="images/picture2.png" alt="project">
-    </header>
+  <section id="projects" class="projects">
+
+    <img class="container-center__image" src="images/picture1.png" alt="project">
+    <img class="container-center__image" src="images/picture2.png" alt="project">
+    <img class="container-center__image" src="images/picture1.png" alt="project">
+    <img class="container-centerd__image" src="images/picture2.png" alt="project">
+    <img class="container-center__image" src="images/picture1.png" alt="project">
+    <img class="container-center__image" src="images/picture2.png" alt="project">
+    <img class="container-center__image" src="images/picture1.png" alt="project">
+    <img class="container-center__image" src="images/picture2.png" alt="project">
+
   </section>
   <!--form-->
   <section class="form">
-    <header>
-      <div class="container">
-        <div class="header-top">
-          <div class="header-top__text">
-            <h2 class="title title--h2">Хотите веб-сайт?</h2>
-            <p class="paragraph paragraph--center">Lorem Ipsum - это текст-"рыба", часто используемый в печати и
-              вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</p>
-          </div>
-        </div>
-        <div class="header-bot">
-          <form class="form" action="">Ваше имя</form>
-          <form class="form" action="">Ваш e-mail</form>
-          <form class="form form--big" action="">Сообщение</form>
-          <button class="button">отправить</button>
+
+    <div class="container">
+      <div class="container-top">
+        <div class="container-top__text">
+          <h2 class="title title--h2">Хотите веб-сайт?</h2>
+          <p class="paragraph paragraph--center">Lorem Ipsum - это текст-"рыба", часто используемый в печати и
+            вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</p>
         </div>
       </div>
-    </header>
+      <div class="container-bot">
+        <form class="form" action="">Ваше имя</form>
+        <form class="form" action="">Ваш e-mail</form>
+        <form class="form form--big" action="">Сообщение</form>
+        <button class="button">отправить</button>
+      </div>
+    </div>
+
   </section>
   <!--footer-->
-  <section id="c5" class="footer">
-    <header>
-      <div class="container">
-        <div class="header-mid">
-          <div class="header-mid__text">
-            <h3 class="title title--h3">Иванов Иван</h3>
-            <p class="paragraph paragraph--small">(с) 2018. Все права защищены.</p>
-          </div>
-          <div class="header-mid__logo">
-            <img class="header-mid__image" src="images/vk.png" alt="vk">
-          </div>
+  <footer id="footer">
+
+    <div class="container">
+      <div class="container-center">
+        <div class="container-center__text">
+          <h3 class="title title--h3">Иванов Иван</h3>
+          <p class="paragraph paragraph--small">(с) 2018. Все права защищены.</p>
+        </div>
+        <div class="container-center__logo">
+          <img class="container-center__image" src="images/vk.png" alt="vk">
         </div>
       </div>
-    </header>
-  </section>
+    </div>
+
+  </footer>
 </body>
 
 </html>
