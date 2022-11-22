@@ -15,51 +15,52 @@
 
 <body>
   <!--first-screen-->
-  <header id="first-screen">
+  <header>
     <div class="container">
-      <div class="container-top">
-        <div class="logo">
-          <a class="logo__link" href="./layout.html">WD</a>
-        </div>
-        <nav class="navbar">
-          <ul class="navbar__list">
-            <li class="navbar__item"><a href="#first-screen" class="navbar__link">главная</a></li>
-            <li class="navbar__item"><a href="#about-me" class="navbar__link">об авторе</a></li>
-            <li class="navbar__item"><a href="#projects" class="navbar__link">работы</a></li>
-            <li class="navbar__item"><a href="#video" class="navbar__link">процесс</a></li>
-            <li class="navbar__item"><a href="#footer" class="navbar__link">контакты</a></li>
-          </ul>
-        </nav>
+      <div class="logo">
+        <a class="logo__link" href="./layout.html">WD</a>
       </div>
-      <div class="container-bot">
-        <img class="container-bot__image" src="images/notebook.png" alt="notebook">
-        <div class="container-bot__text">
-          <h1 class="title title--h1">Дизайн и верстка</h1>
-          <p class="paragraph">
-            Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является
-            стандартной "рыбой" для текстов на латинице с начала XVI века.
-          </p>
-          <button class="button button--big">
-            <p class="button__text">написать мне</p>
-          </button>
-        </div>
-      </div>
+      <nav class="navbar">
+        <ul class="navbar__list">
+          <li class="navbar__item"><a href="#first-screen" class="navbar__link navbar__link--active">главная</a></li>
+          <li class="navbar__item"><a href="#about-me" class="navbar__link">об авторе</a></li>
+          <li class="navbar__item"><a href="#projects" class="navbar__link">работы</a></li>
+          <li class="navbar__item"><a href="#video" class="navbar__link">процесс</a></li>
+          <li class="navbar__item"><a href="#footer" class="navbar__link">контакты</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
+  <section class="first-screen" id="first-screen">
+    <div class="container">
+      <img class="first-screen__image" src="images/notebook.png" alt="notebook">
+      <div class="container__text">
+        <h1 class="title title--h1">Дизайн и верстка</h1>
+        <p class="paragraph">
+          Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является
+          стандартной "рыбой" для текстов на латинице с начала XVI века.
+        </p>
+        <button class="button">
+          <p class="button__text">написать мне</p>
+        </button>
+      </div>
+  </section>
+
+
   <!--about-me-->
   <section id="about-me" class="about-me">
 
     <div class="container">
-      
-        <div class="container__text">
-          <h2 class="title title--h2">Обо мне</h2>
-          <p class="paragraph paragraph--center">
-            Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является
-            стандартной
-            "рыбой" для текстов на латинице с начала XVI века.
-          </p>
-        </div>
-      
+
+      <div class="container__text">
+        <h2 class="title title--h2">Обо мне</h2>
+        <p class="paragraph paragraph--center">
+          Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является
+          стандартной
+          "рыбой" для текстов на латинице с начала XVI века.
+        </p>
+      </div>
+
     </div>
 
   </section>
@@ -153,68 +154,110 @@
   <section id="video" class="video">
 
     <div class="container">
-      
-        <div class="container__text">
-          <h2 class="title title--h2">Как я работаю</h2>
-          <p class="paragraph paragraph--center">Lorem Ipsum - это текст-"рыба", часто используемый в печати и
-            вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</p>
-        </div>
-      
-      
-        <div class="video__grid">
-          <img class="video__image " src="images/video.png" alt="video">
-          <img class="play__image " src="images/play.png" alt="play">
-        </div>
-      
+
+      <div class="container__text">
+        <h2 class="title title--h2">Как я работаю</h2>
+        <p class="paragraph paragraph--center">Lorem Ipsum - это текст-"рыба", часто используемый в печати и
+          вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</p>
+      </div>
+
+
+      <div class="video__grid">
+        <img class="video__image " src="images/video.png" alt="video">
+        <img class="play__image " src="images/play.png" alt="play">
+      </div>
+
     </div>
 
   </section>
   <!--projects-->
   <section id="projects" class="projects">
-
-    <img class="container-center__image" src="images/picture1.png" alt="project">
-    <img class="container-center__image" src="images/picture2.png" alt="project">
-    <img class="container-center__image" src="images/picture1.png" alt="project">
-    <img class="container-centerd__image" src="images/picture2.png" alt="project">
-    <img class="container-center__image" src="images/picture1.png" alt="project">
-    <img class="container-center__image" src="images/picture2.png" alt="project">
-    <img class="container-center__image" src="images/picture1.png" alt="project">
-    <img class="container-center__image" src="images/picture2.png" alt="project">
-
+    <div class="gallery">
+      <div class="gallery__image">
+        <div class="hover">
+          <img class="projects__image" src="images/picture2.png" alt="project">
+          <img class="hover__icon" src="images/eye.png" alt="eye">
+        </div>
+      </div>
+      <div class="gallery__image">
+        <div class="hover">
+          <img class="projects__image" src="images/picture1.png" alt="project">
+          <img class="hover__icon" src="images/eye.png" alt="eye">
+        </div>
+      </div>
+      <div class="gallery__image">
+        <div class="hover">
+          <img class="projects__image" src="images/picture2.png" alt="project">
+          <img class="hover__icon" src="images/eye.png" alt="eye">
+        </div>
+      </div>
+      <div class="gallery__image">
+        <div class="hover">
+          <img class="projects__image" src="images/picture1.png" alt="project">
+          <img class="hover__icon" src="images/eye.png" alt="eye">
+        </div>
+      </div>
+      <div class="gallery__image">
+        <div class="hover">
+          <img class="projects__image" src="images/picture1.png" alt="project">
+          <img class="hover__icon" src="images/eye.png" alt="eye">
+        </div>
+      </div>
+      <div class="gallery__image">
+        <div class="hover">
+          <img class="projects__image" src="images/picture2.png" alt="project">
+          <img class="hover__icon" src="images/eye.png" alt="eye">
+        </div>
+      </div>
+      <div class="gallery__image">
+        <div class="hover">
+          <img class="projects__image" src="images/picture1.png" alt="project">
+          <img class="hover__icon" src="images/eye.png" alt="eye">
+        </div>
+      </div>
+      <div class="gallery__image">
+        <div class="hover">
+          <img class="projects__image" src="images/picture2.png" alt="project">
+          <img class="hover__icon" src="images/eye.png" alt="eye">
+        </div>
+      </div>
+    </div>
   </section>
   <!--form-->
   <section class="form">
 
     <div class="container">
-      <div class="container-top">
-        <div class="container-top__text">
-          <h2 class="title title--h2">Хотите веб-сайт?</h2>
-          <p class="paragraph paragraph--center">Lorem Ipsum - это текст-"рыба", часто используемый в печати и
-            вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</p>
-        </div>
+
+      <div class="container__text">
+        <h2 class="title title--h2">Хотите веб-сайт?</h2>
+        <p class="paragraph paragraph--center">Lorem Ipsum - это текст-"рыба", часто используемый в печати и
+          вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</p>
       </div>
-      <div class="container-bot">
-        <form class="form" action="">Ваше имя</form>
-        <form class="form" action="">Ваш e-mail</form>
-        <form class="form form--big" action="">Сообщение</form>
-        <button class="button">отправить</button>
+      <div class="user-data">
+
+        <input class="form-input" type="text" placeholder="Ваше имя">
+        <input class="form-input" type="text" placeholder="Ваш e-mail">
       </div>
+      <textarea class="form-textarea" type="text" placeholder="Сообщение"></textarea>
+      <button class="button button--small">
+        <p class="button__text">отправить</p>
+      </button>
+
     </div>
 
   </section>
   <!--footer-->
-  <footer id="footer">
+  <footer id="bottom" class="bottom">
 
-    <div class="container">
-      <div class="container-center">
-        <div class="container-center__text">
-          <h3 class="title title--h3">Иванов Иван</h3>
-          <p class="paragraph paragraph--small">(с) 2018. Все права защищены.</p>
-        </div>
-        <div class="container-center__logo">
-          <img class="container-center__image" src="images/vk.png" alt="vk">
-        </div>
-      </div>
+
+    <div class="bottom__text">
+      <h3 class="title title--h3">Иванов Иван</h3>
+      <p class="paragraph paragraph--small">(с) 2018. Все права защищены.</p>
+    </div>
+    <div class="bottom__logo">
+      <img class="bottom__logo__image" src="images/vk.png" alt="vk">
+      <img class="bottom__logo__image" src="images/vk.png" alt="vk">
+      <img class="bottom__logo__image" src="images/vk.png" alt="vk">
     </div>
 
   </footer>
