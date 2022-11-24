@@ -2,24 +2,39 @@ body {
   background: #F9F9F9;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   word-wrap: break-word;
-}
-
-.container{
-  width: 1110px;
-}
-
-header {
-  padding: 2% 0;
-  background: #EEEFF1;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
+
+
 }
+
+.container {
+  width: 390px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+header .container {
+  align-items: baseline;
+}
+
+.about-me {
+  padding: 90px 0 80px;
+}
+
 
 .logo {
+  margin: 22px 0 67px;
   height: 60px;
   font-family: 'Revalia';
   font-size: 48px;
+
 }
 
 .logo__link {
@@ -33,69 +48,52 @@ header {
 
 
 
-
-.first-screen__content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10% 0;
-}
-
 .first-screen {
   background: #EEEFF1;
-  padding: 2.2% 2%;
-  display: flex;
-  flex-direction: column;
+
 }
 
 .first-screen__image {
-  width: auto;
-  
+  width: 300px;
+  margin-bottom: 50px;
+
+
 }
 
 .content__text {
 
+
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+
 }
 
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-a {
-  max-width: 540px;
-  height: auto;
+.skills__item .paragraph--start {
+  text-align: start;
 }
+
 
 .title--h1 {
   font-weight: 500;
-  font-size: 48px;
-  line-height: 79px;
+  font-size: 36px;
   color: #000000;
-  margin-bottom: 10%;
+  margin-bottom: 45px;
+  text-align: center;
 }
 
 .paragraph {
   font-weight: 400;
   font-size: 16px;
-  line-height: 26px;
   color: #727272;
   text-align: center;
 }
 
 .button {
-
+  padding: 25px 41px;
   border: none;
-  padding: 5% 9%;
-  margin: 50px 0;
+  margin: 40px 0 100px;
   background: #34547A;
 }
 
@@ -110,29 +108,23 @@ a {
 .button__text {
   font-weight: 400;
   font-size: 16px;
-  line-height: 26px;
+  line-height: 15px;
   text-align: center;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #FFFFFF;
+  outline: none;
+  text-decoration: none;
 }
 
-.about-me {
-  padding: 0 36% 5% 36%;
-}
+
 
 .numbers {
   background: #34547A;
-  display: flex;
-  justify-content: center;
+
 }
 
-.skills {
-  padding: 5%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 
 .video {
   background: #EEEFF1;
@@ -166,9 +158,9 @@ a {
 
 
 .title--h2 {
-  padding: 100px 0 50px 0;
+  margin-bottom: 40px;
   font-size: 32px;
-  line-height: 38px;
+  line-height: 30px;
   text-align: center;
   color: #000000;
 }
@@ -176,47 +168,60 @@ a {
 
 
 .numbers__list {
-  padding: 5%;
+  padding: 75px 0;
   list-style-type: none;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 3fr 3fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 90px;
+
 }
 
 .numbers__item {
+  width: 141px;
   display: flex;
-  margin: 0 7%;
+  justify-content: space-around;
+  align-items: center;
+
+
+
 }
 
 .numbers__image {
-  height: 77%
+  width: 50px;
+  height: 50px;
 }
 
 .numbers__text {
-  padding: 0 17%;
+  margin: 3px 0;
 }
 
 .title--h3 {
   font-weight: 500;
   font-size: 21px;
-  line-height: 25px;
+  line-height: 19px;
   color: #FFFFFF;
+  margin-bottom: 10px;
 }
 
 .paragraph--list {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 15px;
   color: #FFFFFF;
+  text-align: start
 }
 
+
+
 .skills__text {
-  padding-right: 8.7%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: baseline;
+
 }
 
-.title__left {
-  text-align: left;
-}
+
 
 .skills__list {
   display: flex;
@@ -231,12 +236,13 @@ a {
 }
 
 .skills-bar {
-  margin: 2% 0 3% 0;
-  width: 445px;
+  margin: 20px 0 30px 0;
+  width: 339px;
   background: #C4C4C4;
 }
 
 .bar {
+
   height: 4px;
 }
 
@@ -246,41 +252,54 @@ a {
 }
 
 .skills__image {
-  width: 555px;
+  width: 339px;
+  margin: 100px 0;
 }
 
-.video__text {
+.skills__content .container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column-reverse;
+}
+
+.skills__content {
+  margin-bottom: 100px;
+}
+
+.video__content {
+  padding: 100px 0;
 }
 
 .video__player {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 60px;
 }
 
 .video__image {
-  margin: 3% 0 5% 0;
-  width: 1110px;
-  top: 10px;
+  width: 339px;
+
   position: relative;
 }
 
 .play__image {
   position: absolute;
+  width: 75px;
 }
 
 .gallery {
-  margin: 1.5% 0;
+  margin: 28px 0;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 4fr 4fr;
+
 }
 
 .gallery__image {
   background-color: rgba(52, 84, 122, 0.8);
+}
+
+.projects__image {
+  width: 188px;
 }
 
 .gallery__image:hover .projects__image {
@@ -307,8 +326,13 @@ a {
   transition: .2s ease;
 }
 
+.form__content {
+  padding: 100px 0 60px;
+}
+
 .user-data {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-top: 65px;
@@ -316,16 +340,16 @@ a {
 
 .user-data__input {
   background: #FFFFFF;
-  width: 255px;
+  width: 342px;
   height: 50px;
   border: none;
   outline: none;
-  margin: 20px 15px;
+  margin: 0 15px 20px 15px;
   padding: 17px 20px
 }
 
 .user-data__textarea {
-  width: 540px;
+  width: 342px;
   height: 175px;
   resize: none;
   border: none;
@@ -334,29 +358,49 @@ a {
 }
 
 .paragraph--small {
+  font-weight: 400;
   font-size: 13px;
   line-height: 21px;
   color: #FFFFFF;
-  margin-top: 20px;
+  margin-top: 10pxpx;
 }
 
 .button--small {
-  padding: 1%;
+  padding: 20px 40px;
+  margin-bottom: 40px;
+}
+
+.bottom__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .bottom__text {
 
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  margin: 50px 0 40px;
 
 }
 
 .bottom__logo {
   display: flex;
+  margin-bottom: 50px;
 }
 
 .bottom__logo__image {
   width: 44px;
-  margin: 50% 8%;
+  height: 23px;
+  margin: 0 11px;
+}
+
+a,
+h1,
+h2,
+h3,
+p {
+  max-width: 350px;
+  height: auto;
 }

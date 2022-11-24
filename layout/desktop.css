@@ -7,17 +7,19 @@ body {
 .container {
   width: 1150px;
   margin: 0 auto;
- 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
 
 }
-.about-me__content{
-  display: flex;
-  justify-content: center;
+
+.about-me__content {
+  margin: 0 auto 40px;
 }
 
 header {
   padding-top: 57px;
-  background: #EEEFF1;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -27,7 +29,7 @@ header {
   height: 60px;
   font-family: 'Revalia';
   font-size: 48px;
-  margin-right: 398px;
+
 }
 
 .logo__link {
@@ -70,14 +72,11 @@ header {
 
 .first-screen {
   background: #EEEFF1;
-  display: flex;
-  flex-direction: column;
-
 }
 
 .first-screen__image {
   width: 357px;
-  margin: 0 85px 0 130px;
+  margin-left: 85px;
 }
 
 .content__text {
@@ -87,6 +86,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
 
 .content__text--base {
@@ -96,7 +96,7 @@ header {
 .title--h1 {
   font-weight: 500;
   font-size: 48px;
-  line-height: 79px;
+  line-height: 45px;
   color: #000000;
   margin-bottom: 60px;
 }
@@ -132,16 +132,18 @@ header {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #FFFFFF;
+  outline: none;
+  text-decoration: none;
 }
 
-.about-me {}
+
 
 .numbers {
   background: #34547A;
 
 }
 
-.skills {}
+
 
 .video {
   background: #EEEFF1;
@@ -177,7 +179,7 @@ header {
 .title--h2 {
   padding: 20px 0 50px 0;
   font-size: 32px;
-
+  line-height: 30px;
   text-align: center;
   color: #000000;
 }
@@ -189,14 +191,19 @@ header {
 .numbers__list {
   padding: 100px 0;
   list-style-type: none;
+  width: 1150px;
+  margin: 0 auto;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
 .numbers__item {
+  width: 141px;
   display: flex;
-  margin-right: 49px;
+  justify-content: space-between;
+  align-items: center;
+
 }
 
 .numbers__image {
@@ -205,28 +212,32 @@ header {
 }
 
 .numbers__text {
-  margin-left: 20px;
+  margin: 3px 0;
 }
 
 .title--h3 {
   font-weight: 500;
   font-size: 21px;
-  line-height: 25px;
+  line-height: 19px;
   color: #FFFFFF;
   margin-bottom: 10px;
 }
 
 .paragraph--list {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 15px;
   color: #FFFFFF;
   text-align: start
 }
 
-.skill__content {
+.skills__content {
+  margin: 0 auto;
   display: flex;
+  justify-content: space-between;
 }
 
 .skills__text {
-  margin-right: 150px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -271,10 +282,11 @@ header {
 }
 
 .video__content {
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-padding-bottom: 100px;
+  padding-bottom: 100px;
 }
 
 .video__text {
@@ -334,12 +346,17 @@ padding-bottom: 100px;
   transition: .2s ease;
 }
 
-.form__content{
-display: flex;
-flex-direction: column;
-align-items: center;
+.form__content {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
 
+}
+
+.form .content__text {
+  margin: 100px auto 60px;
 }
 
 .user-data {
@@ -379,13 +396,14 @@ align-items: center;
 .button--small {
   padding: 15px 40px;
   margin-bottom: 40px;
-  }
+}
 
-  .bottom__content{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+.bottom__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .bottom__text {
 
   display: flex;
@@ -403,4 +421,13 @@ align-items: center;
   width: 44px;
   height: 23px;
   margin: 0 11px;
+}
+
+a,
+h1,
+h2,
+h3,
+p {
+  max-width: 540px;
+  height: auto;
 }
