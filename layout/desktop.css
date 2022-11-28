@@ -12,7 +12,7 @@ body {
 }
 
 .content__text {
-  margin: 100px 0 60px 0;
+  
   width: 540px;
   display: flex;
   flex-direction: column;
@@ -34,7 +34,7 @@ body {
 }
 
 .title-h2 {
-  padding: 20px 0 50px 0;
+  padding-bottom: 50px;
   font-size: 32px;
   line-height: 30px;
   text-align: center;
@@ -111,7 +111,7 @@ button:active {
 
 .btn-small {
   padding: 15px 40px;
-  margin-bottom: 40px;
+  
 }
 
 /* */
@@ -124,7 +124,7 @@ header {
 }
 
 .logo__link {
-  margin: 22px 0 67px;
+  
   height: 60px;
   font-family: 'Revalia';
   font-size: 48px;
@@ -163,7 +163,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 40px 0 86px 0;
+  padding: 140px 0 ;
 }
 
 .first-screen {
@@ -176,6 +176,9 @@ header {
 }
 
 /* */
+.about-me{
+  padding: 119px 0 100px;
+}
 
 .about-me .container {
   justify-content: center;
@@ -215,6 +218,7 @@ header {
 /* */
 
 .skills__content {
+  padding: 100px 0;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -256,7 +260,6 @@ header {
 
 .skills__image {
   width: 555px;
-  margin: 100px 0;
 }
 
 /* */
@@ -267,6 +270,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 100px 0;
 }
 
 .video__content {
@@ -274,7 +278,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 100px;
+  
 }
 
 .video__text {
@@ -347,7 +351,7 @@ header {
   align-items: center;
   justify-content: center;
   background: #EEEFF1;
-  padding: 0;
+  
 }
 
 .form__content {
@@ -355,10 +359,11 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 100px 0;
 }
 
 .form .content__text {
-  margin: 100px auto 60px;
+  margin: 0 auto ;
 }
 
 .user-data {
