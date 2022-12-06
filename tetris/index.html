@@ -6,17 +6,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tetris</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P">
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <div id="root">
-    <h1>
-      <span style="color: red">T</span><span style="color: orange">E</span><span style="color: yellow">T</span><span
-        style="color: green">R</span><span style="color: cyan">I</span><span style="color: purple">S</span>
-    </h1>
+  <div class="grid">
+    <canvas id="board" class="game-board"></canvas>
+    <div class="right-column">
+      <div>
+        <h1><span style="color: red">T</span><span style="color: orange">E</span><span style="color: yellow">T</span><span
+          style="color: green">R</span><span style="color: cyan">I</span><span style="color: purple">S</span>
+        </h1>
+        <p>Score: <span id="score">0</span></p>
+        <p>Lines: <span id="lines">0</span></p>
+        <p>Level: <span id="level">0</span></p>
+        <canvas id="next" class="next"></canvas>
+      </div>
+      <button onclick="play()" class="play-button">Play</button>
+    </div>
   </div>
-  <script src="index.js" type="module"></script>
+  <script src="constants.js"></script>
+  <script src="board.js"></script>
+  <script src="piece.js"></script>
+  <script src="main.js"></script>
 </body>
 
 </html>
