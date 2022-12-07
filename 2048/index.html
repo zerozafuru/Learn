@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2048</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="heading">
+      <h1 class="title">2048</h1>
+      <div class="scores">
+        <div class="score">score<span>0</span></div>
+        <div class="best">best<span>0</span></div>
+      </div>
+    </div>
+    
+      <button class="btn" onclick="newGame()">New Game</button>
+    
+    <div class="game" id="game">
+      <div class="grid">
+        <div class="row">
+          <div class="cell" id="00"></div>
+          <div class="cell" id="01"></div>
+          <div class="cell" id="02"></div>
+          <div class="cell" id="03"></div>
+        </div>
+        <div class="row">
+          <div class="cell" id="10"></div>
+          <div class="cell" id="11"></div>
+          <div class="cell" id="12"></div>
+          <div class="cell" id="13"></div>
+        </div>
+        <div class="row">
+          <div class="cell" id="20"></div>
+          <div class="cell" id="21"></div>
+          <div class="cell" id="22"></div>
+          <div class="cell" id="23"></div>
+        </div>
+        <div class="row">
+          <div class="cell" id="30"></div>
+          <div class="cell" id="31"></div>
+          <div class="cell" id="32"></div>
+          <div class="cell" id="33"></div>
+        </div>
+
+      </div>
+      <div class="tile"></div>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>

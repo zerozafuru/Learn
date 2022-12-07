@@ -8,8 +8,6 @@ ctxNext.canvas.width = 4 * BLOCK_SIZE;
 ctxNext.canvas.height = 4 * BLOCK_SIZE;
 ctxNext.scale(BLOCK_SIZE, BLOCK_SIZE);
 
-
-
 ctx.canvas.width = COLS * BLOCK_SIZE;
 ctx.canvas.height = ROWS * BLOCK_SIZE;
 
@@ -27,7 +25,6 @@ function updateAccount(key, value) {
     element.textContent = value;
   }
 }
-
 
 let account = new Proxy(accountValues, {
   set: (target, key, value) => {
@@ -52,7 +49,6 @@ function resetGame() {
 function play() {
   resetGame();
 
-
   animate();
 }
 
@@ -61,12 +57,12 @@ let requestId;
 
 function gameOver() {
   cancelAnimationFrame(requestId);
- 
+  
+ctx.fillStyle = 'red';
+ctx.fillRect(1, 3, 8, 1.2);
+ ctx.font = '1px';
   ctx.fillStyle = 'white';
-  ctx.fillRect(100, 300, 800, 120);
-  ctx.font = '1px';
-  ctx.fillStyle = 'red';
-  ctx.fillText('GAME OVER', 180, 400);
+  ctx.fillText('GAME OVER', 1.8, 4);
 }
 
 
@@ -85,12 +81,22 @@ function animate(now = 0) {
   requestId = requestAnimationFrame(animate);
 }
 
+actions = {
+  [KEY.ESC]: () => {
+    gameOver();
+    return;
+  },
+  [KEY.ENTER]: () => this.play()
+}
+
+
 moves = {
   [KEY.UP]: (p) => board.rotate(p),
   [KEY.SPACE]: p => ({ ...p, y: p.y + 1 }),
   [KEY.LEFT]: p => ({ ...p, x: p.x - 1 }),
   [KEY.RIGHT]: p => ({ ...p, x: p.x + 1 }),
-  [KEY.DOWN]: p => ({ ...p, y: p.y + 1 })
+  [KEY.DOWN]: p => ({ ...p, y: p.y + 1 }),
+
 
 };
 
@@ -100,16 +106,23 @@ document.addEventListener('keydown', event => {
     event.preventDefault();
 
     let p = moves[event.keyCode](board.piece);
-     if (event.keyCode === KEY.SPACE) {
+
+    if (event.keyCode === KEY.SPACE) {
       while (board.valid(p)) {
         account.score += POINTS.HARD_DROP;
         board.piece.move(p);
         p = moves[KEY.DOWN](board.piece);
-      } 
-    
+      }
+
+    } else if (event.keyCode === KEY.UP) {
+      if (board.valid(p)) {
+        board.rotate(p)
+      }
     } else if (board.valid(p)) {
       board.piece.move(p);
     }
-   
+
+  } else {
+    actions[event.keyCode]()
   }
 });

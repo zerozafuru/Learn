@@ -10,7 +10,6 @@ body {
 
 }
 
-
 .grid {
   display: grid;
   grid-template-columns: 320px 200px;
@@ -24,7 +23,7 @@ body {
 
 .game-board {
   border: ridge 5px white;
-  background-color: black;
+  background-color: rgb(20, 20, 20);
 }
 
 .play-button {
@@ -43,3 +42,4 @@ body {
 .play-button:active {
   filter: brightness(100%);
 }
+

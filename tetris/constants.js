@@ -7,7 +7,9 @@ const KEY = {
   SPACE: 32,
   LEFT: 37,
   RIGHT: 39,
-  DOWN: 40
+  DOWN: 40,
+  ESC: 27,
+  ENTER: 13
 }
 
 Object.freeze(KEY);
