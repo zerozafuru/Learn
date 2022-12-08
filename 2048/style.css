@@ -15,7 +15,7 @@ html {
 .heading {
   display: flex;
   justify-content: space-between;
-  
+
 }
 
 .title {
@@ -28,14 +28,14 @@ html {
   float: left;
 }
 
-.scores{
+.scores {
   display: flex;
   gap: 5px;
   height: 100%;
 }
 
 .score,
-.best{
+.best {
   align-self: flex-end;
   background: #bbada0;
   padding: 15px 25px;
@@ -71,26 +71,26 @@ span {
   border: none;
 }
 
-.btn:hover{
+.btn:hover {
   filter: brightness(75%);
 }
 
-.btn:active{
+.btn:active {
   filter: brightness(100%);
 }
 
-.game{
+.game {
   margin-top: 40px;
   background: #bbada0;
   border-radius: 10px;
 }
 
-.grid{
+.grid {
   display: flex;
   flex-direction: column;
   gap: 15px;
   padding: 15px 0;
- 
+
 }
 
 .row {
@@ -102,14 +102,66 @@ span {
 
 .cell {
   background: rgba(238, 228, 218, 0.35);
-  
+
   height: 107px;
   width: 107px;
   border-radius: 3px;
+  font-weight: bold;
+  font-size: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.tile {position: absolute;
-  height: 107px;
-  width: 107px;
-  border-radius: 3px;
+.tile2 {
+  background: #eee4da;
+}
+
+.tile4{
+  background: #eee1c9;
+}
+
+.tile8{
+  color: #f9f6f2;
+  background: #f3b27a;
+}
+
+.tile16{
+  color: #f9f6f2;
+  background: #f69664;
+}
+
+.tile32{
+  color: #f9f6f2;
+  background: #f77c5f;
+}
+
+.tile64{
+  color: #f9f6f2;
+  background: #f75f3b;
+}
+
+.tile128{
+  color: #f9f6f2;
+  background: #edd073;
+}
+
+.tile256{
+  color: #f9f6f2;
+  background: #edcc62;
+}
+
+.tile512{
+  color: #f9f6f2;
+  background: #edc950;
+}
+
+.tile1024{
+  color: #f9f6f2;
+  background: #edc53f;
+}
+
+.tile2048{
+  color: #f9f6f2;
+  background: #edc22e;
 }
