@@ -49,112 +49,177 @@ const draw = () => {
 }
 
 const moveLeft = () => {
-  for (let i = 0; i < 3; i++) {
-    for (let x = 0; x < 4; x++) {
-      for (let y = 0; y < 4; y++) {
-        if (board[x][y] === 0) {
-          let yN = y + 1
-          if (yN < 4) {
-            let n = board[x][yN]
-            board[x][y] = n
-            board[x][yN] = 0
-          } else {
-            board[x][y] = 0
-          }
-
-        }
-      }
-    }
+  for (let x = 0; x < 4; x++) {
+    moveLeftItem(x);
   }
   randomTile()
+}
+
+const moveLeftItem = (x) => {
+  for (let y = 0; y < 3; y++) {
+    let next = nextItemY(x, y);
+    if (next != -1) {
+      if (board[x][y] == 0) {
+        board[x][y] = board[x][next];
+        board[x][next] = 0;
+        y--;
+      }
+      else if (board[x][y] == board[x][next]) {
+        board[x][y] *= 2;
+        board[x][next] = 0;
+      }
+    }
+    else {
+      break;
+    }
+  }
+}
+
+const nextItemY = (x, y) => {
+  for (let i = y + 1; i < 4; i++) {
+    if (board[x][i] != 0) {
+      return i;
+    }
+  }
+  return -1;
 }
 
 const moveRight = () => {
-  for (let i = 0; i < 3; i++) {
-    for (let x = 0; x < 4; x++) {
-      for (let y = 4; y > 0; y--) {
-        if (board[x][y] === 0) {
-          let yN = y - 1
-          if (yN <4) {
-            let n = board[x][yN]
-            board[x][y] = n
-            board[x][yN] = 0
-          } else {
-            board[x][y] = 0
-          }
-
-        }
-      }
-    }
+  for (let x = 0; x < 4; x++) {
+    moveRightItem(x);
   }
   randomTile()
 }
+
+const moveRightItem = (x) => {
+  for (let y = 3; y > 0; y--) {
+    let next = prevItemY(x, y);
+    if (next != -1) {
+      if (board[x][y] == 0) {
+        board[x][y] = board[x][next];
+        board[x][next] = 0;
+        y++;
+      }
+      else if (board[x][y] == board[x][next]) {
+        board[x][y] *= 2;
+        board[x][next] = 0;
+      }
+    }
+    else {
+      break;
+    }
+  }
+}
+
+const prevItemY = (x, y) => {
+  for (let i = y - 1; i >= 0; i--) {
+    if (board[x][i] != 0) {
+      return i;
+    }
+  }
+  return -1;
+}
+
 const moveUp = () => {
-  for (let i = 0; i < 3; i++) {
-    for (let x = 0; x < 4; x++) {
-      for (let y = 0; y < 4; y++) {
-        if (board[x][y] === 0) {
-          let xN = x + 1
-          if (xN < 4) {
-            let n = board[xN][y]
-            board[x][y] = n
-            board[xN][y] = 0
-          } else {
-            board[x][y] = 0
-          }
-
-        }
-      }
-    }
+  for (let x = 0; x < 4; x++) {
+    moveUpItem(x);
   }
   randomTile()
 }
+
+const moveUpItem = (x) => {
+  for (let y = 0; y < 3; y++) {
+    let next = nextItemX(x, y);
+    if (next != -1) {
+      if (board[y][x] == 0) {
+        board[y][x] = board[next][x];
+        board[next][x] = 0;
+        y++;
+      }
+      else if (board[y][x] == board[next][x]) {
+        board[y][x] *= 2;
+        board[next][x] = 0;
+      }
+    }
+    else {
+      break;
+
+    }
+  }
+}
+
+const nextItemX = (x, y) => {
+  for (let i = y + 1; i < 4; i++) {
+    if (board[i][x] != 0) {
+      return i;
+    }
+  }
+  return -1;
+}
+
 const moveDown = () => {
-  console.log(board)
-  console.log(board[0][0])
-  for (let i = 0; i < 3; i++) {
-    for (let x = 4; x > 0; x--) {
-      for (let y = 0; y < 4; y++) {
-        console.log(board[x])
-        if (board[x]?.[y] === 0) {
-          let xN = x - 1
-          if (xN < 4) {
-            let n = board[xN][y]
-            board[x][y] = n
-            board[xN][y] = 0
-          } else {
-            board[x][y] = 0
-          }
-
-        }
-      }
-    }
+  for (let x = 0; x < 4; x++) {
+    moveDownItem(x);
   }
+
   randomTile()
 }
 
+const moveDownItem = (x) => {
+  for (let y = 3; y > 0; y--) {
+    let next = prevItemX(x, y);
+    if (next != -1) {
+      if (board[y][x] == 0) {
+        board[y][x] = board[next][x];
+        board[next][x] = 0;
+        y++;
+      }
+      else if (board[y][x] == board[next][x]) {
+        board[y][x] *= 2;
+        board[next][x] = 0;
+      }
+    }
+    else {
+      break;
+
+    }
+  }
+
+}
+
+const prevItemX = (x, y) => {
+  for (let i = y - 1; i >= 0; i--) {
+    if (board[i][x] != 0) {
+      return i;
+    }
+  }
+  return -1;
+}
 
 
 
 
 document.addEventListener('keydown', event => {
-  if (event.keyCode === 37) {
+  if (event.code == 'ArrowLeft') {
     moveLeft()
   }
-  if (event.keyCode === 38) {
+  if (event.code == 'ArrowUp') {
     moveUp()
   }
-  if (event.keyCode === 39) {
+  if (event.code == 'ArrowRight') {
     moveRight()
   }
-  if (event.keyCode === 40) {
+  if (event.code == 'ArrowDown') {
     moveDown()
   }
-}
+  if (event.code == 'Space') {
+    game()
+  }
+})
 
 
 
-)
+
 
 
 
