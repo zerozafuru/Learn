@@ -83,6 +83,7 @@ span {
   margin-top: 40px;
   background: #bbada0;
   border-radius: 10px;
+  position: relative;
 }
 
 .grid {
@@ -90,6 +91,7 @@ span {
   flex-direction: column;
   gap: 15px;
   padding: 15px 0;
+  opacity: 1;
 
 }
 
@@ -101,8 +103,6 @@ span {
 }
 
 .cell {
-  background: rgba(238, 228, 218, 0.35);
-
   height: 107px;
   width: 107px;
   border-radius: 3px;
@@ -111,6 +111,12 @@ span {
   display: flex;
   justify-content: center;
   align-items: center;
+  
+  
+}
+
+.empty{
+  background: rgba(238, 228, 218, 0.35);
 }
 
 .tile2 {
@@ -164,4 +170,19 @@ span {
 .tile2048{
   color: #f9f6f2;
   background: #edc22e;
+}
+
+.game-over{
+  position: absolute;
+  opacity: 0;
+  width: 500px;
+  
+  text-align: center;
+  line-height: 500px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 50px;
+  z-index: 10;
+  transition: all 500ms;
+  
 }

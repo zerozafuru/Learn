@@ -1,9 +1,11 @@
 let score;
-let board;
 
+let board;
+let moveEvent
 
 
 const game = () => {
+  score = 0
   board = [
     [0, 0, 0, 0],
     [0, 0, 0, 0],
@@ -11,8 +13,16 @@ const game = () => {
     [0, 0, 0, 0]
   ]
 
+
+  if (localStorage.getItem('best') == null) {
+    localStorage.setItem('best', 0)
+  }
   randomTile()
   randomTile()
+  scoreValue()
+
+  document.getElementById('grid').style.opacity = "1"
+  document.getElementById('game-over').style.opacity = "0"
 }
 
 const randomTile = () => {
@@ -36,7 +46,7 @@ const draw = () => {
 
       if (board[x][y] == 0) {
         div.innerHTML = ''
-        div.className = 'cell'
+        div.className = 'cell empty'
       } else {
 
         div.innerHTML = `${board[x][y]}`
@@ -49,10 +59,18 @@ const draw = () => {
 }
 
 const moveLeft = () => {
+
   for (let x = 0; x < 4; x++) {
     moveLeftItem(x);
   }
-  randomTile()
+
+  if (moveEvent) {
+    randomTile()
+    moveEvent = false
+  }else {
+    gameOver()
+  }
+  scoreValue()
 }
 
 const moveLeftItem = (x) => {
@@ -63,10 +81,14 @@ const moveLeftItem = (x) => {
         board[x][y] = board[x][next];
         board[x][next] = 0;
         y--;
+        moveEvent = true
       }
       else if (board[x][y] == board[x][next]) {
+
         board[x][y] *= 2;
         board[x][next] = 0;
+        moveEvent = true
+        score += board[x][y]
       }
     }
     else {
@@ -88,7 +110,13 @@ const moveRight = () => {
   for (let x = 0; x < 4; x++) {
     moveRightItem(x);
   }
-  randomTile()
+  if (moveEvent) {
+    randomTile()
+    moveEvent = false
+  } else {
+    gameOver()
+  }
+  scoreValue()
 }
 
 const moveRightItem = (x) => {
@@ -99,10 +127,14 @@ const moveRightItem = (x) => {
         board[x][y] = board[x][next];
         board[x][next] = 0;
         y++;
+        moveEvent = true
       }
       else if (board[x][y] == board[x][next]) {
+
         board[x][y] *= 2;
         board[x][next] = 0;
+        moveEvent = true
+        score += board[x][y]
       }
     }
     else {
@@ -124,7 +156,13 @@ const moveUp = () => {
   for (let x = 0; x < 4; x++) {
     moveUpItem(x);
   }
-  randomTile()
+  if (moveEvent) {
+    randomTile()
+    moveEvent = false
+  }else {
+    gameOver()
+  }
+  scoreValue()
 }
 
 const moveUpItem = (x) => {
@@ -135,10 +173,14 @@ const moveUpItem = (x) => {
         board[y][x] = board[next][x];
         board[next][x] = 0;
         y++;
+        moveEvent = true
       }
       else if (board[y][x] == board[next][x]) {
+
         board[y][x] *= 2;
         board[next][x] = 0;
+        moveEvent = true
+        score += board[y][x]
       }
     }
     else {
@@ -162,7 +204,13 @@ const moveDown = () => {
     moveDownItem(x);
   }
 
-  randomTile()
+  if (moveEvent) {
+    randomTile()
+    moveEvent = false
+  }else {
+    gameOver()
+  }
+  scoreValue()
 }
 
 const moveDownItem = (x) => {
@@ -173,10 +221,14 @@ const moveDownItem = (x) => {
         board[y][x] = board[next][x];
         board[next][x] = 0;
         y++;
+        moveEvent = true
       }
       else if (board[y][x] == board[next][x]) {
+
         board[y][x] *= 2;
         board[next][x] = 0;
+        moveEvent = true
+        score += board[y][x]
       }
     }
     else {
@@ -217,9 +269,34 @@ document.addEventListener('keydown', event => {
   }
 })
 
+const scoreValue = () => {
+
+  if (score > localStorage.getItem('best')) {
+    localStorage.setItem('best', score)
+  }
+  let divScore = document.getElementById('score')
+  divScore.innerHTML = `${score}`
+
+  let divBest = document.getElementById('best')
+  divBest.innerHTML = `${localStorage.getItem('best')}`
+}
+
+
+const gameOver = () => {
+  if (document.getElementsByClassName('empty').length == 0) {
+
+    over()
 
 
 
+  }
+  
+}
+const over = () => {
+  document.getElementById('grid').style.opacity = "0.5"
+  document.getElementById('game-over').style.opacity = "1"
+  
+}
 
 
 
