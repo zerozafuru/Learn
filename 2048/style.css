@@ -165,11 +165,15 @@ span {
 .tile1024{
   color: #f9f6f2;
   background: #edc53f;
+  font-size: 40px;
+  
 }
 
 .tile2048{
   color: #f9f6f2;
   background: #edc22e;
+  font-size: 40px;
+  
 }
 
 .game-over{
