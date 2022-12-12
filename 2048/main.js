@@ -69,6 +69,7 @@ const moveLeft = () => {
     moveEvent = false
   }
   scoreValue()
+  win()
   gameOver()
 }
 
@@ -114,6 +115,7 @@ const moveRight = () => {
     moveEvent = false
   }
   scoreValue()
+  win()
   gameOver()
 }
 
@@ -159,6 +161,7 @@ const moveUp = () => {
     moveEvent = false
   }
   scoreValue()
+  win()
   gameOver()
 }
 
@@ -206,7 +209,9 @@ const moveDown = () => {
     moveEvent = false
   }
   scoreValue()
+  win()
   gameOver()
+  
 }
 
 const moveDownItem = (x) => {
@@ -303,7 +308,12 @@ const isGameOver = () => {
 
 
 
-
+const win = () => {
+  if (document.getElementsByClassName('tile2048').length>0) {
+    document.getElementById('grid').style.opacity = "0.5"
+  document.getElementById('win').style.opacity = "1"
+  }
+}
   
 
 
