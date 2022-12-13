@@ -46,7 +46,7 @@ const draw = () => {
   for (let x = 0; x < 4; x++) {
     for (let y = 0; y < 4; y++) {
 
-      let div = document.querySelector(`.cell[data-${x}${y}]`)
+      let div = document.querySelector(`[data-${x}${y}]`)
 
       if (board[x][y] == 0) {
         div.innerHTML = ''
