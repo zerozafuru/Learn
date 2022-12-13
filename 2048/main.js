@@ -21,6 +21,10 @@ const game = () => {
   randomTile()
   scoreValue()
 
+  resetGame()
+}
+
+const resetGame = () => {
   document.getElementById('grid').style.opacity = "1"
   document.getElementById('game-over').style.opacity = "0"
 }
@@ -42,7 +46,7 @@ const draw = () => {
   for (let x = 0; x < 4; x++) {
     for (let y = 0; y < 4; y++) {
 
-      let div = document.getElementById(x + '' + y)
+      let div = document.querySelector(`.cell[data-${x}${y}]`)
 
       if (board[x][y] == 0) {
         div.innerHTML = ''
@@ -211,7 +215,7 @@ const moveDown = () => {
   scoreValue()
   win()
   gameOver()
-  
+
 }
 
 const moveDownItem = (x) => {
@@ -284,43 +288,43 @@ const scoreValue = () => {
 
 
 const isGameOver = () => {
-  
-    for (let x = 0; x < 4; x++) {
-      for (let y = 0; y < 4; y++) {
-        if (board[x][y] == 0) {
+
+  for (let x = 0; x < 4; x++) {
+    for (let y = 0; y < 4; y++) {
+      if (board[x][y] == 0) {
+        return 0
+      }
+      if (x < 3) {
+        if (board[x][y] == board[x + 1][y]) {
           return 0
         }
-        if (x < 3) {
-          if (board[x][y] == board[x + 1][y]) {
-            return 0
-          }
-        } 
-         if (y < 3) {
-          if (board[x][y] == board[x][y + 1]) {
-            return 0
-          }
-          
-          }
-        }
       }
+      if (y < 3) {
+        if (board[x][y] == board[x][y + 1]) {
+          return 0
+        }
 
+      }
     }
+  }
+
+}
 
 
 
 const win = () => {
-  if (document.getElementsByClassName('tile2048').length>0) {
+  if (document.getElementsByClassName('tile2048').length > 0) {
     document.getElementById('grid').style.opacity = "0.5"
-  document.getElementById('win').style.opacity = "1"
+    document.getElementById('win').style.opacity = "1"
   }
 }
-  
+
 
 
 const gameOver = () => {
-  if(isGameOver() != 0) {
-  document.getElementById('grid').style.opacity = "0.5"
-  document.getElementById('game-over').style.opacity = "1"
+  if (isGameOver() != 0) {
+    document.getElementById('grid').style.opacity = "0.5"
+    document.getElementById('game-over').style.opacity = "1"
   }
 }
 
