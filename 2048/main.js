@@ -176,7 +176,7 @@ const moveUpItem = (x) => {
       if (board[y][x] == 0) {
         board[y][x] = board[next][x];
         board[next][x] = 0;
-        y++;
+        y--;
         moveEvent = true
       }
       else if (board[y][x] == board[next][x]) {
